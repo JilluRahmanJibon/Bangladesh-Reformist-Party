@@ -1,13 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world! hello 
-  </h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangladesh Reformist Party</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			src="https://kit.fontawesome.com/ae3f90b708.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- tailwind custom css  -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							brp: "#0C611C",
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body>
+		<!-- navbar area -->
+		<navbar class="flex justify-between">
+			<!-- nav logo will appear here  -->
+			<section>
+				<a href="/"><img class="w-full" src="Assets/logo.png" alt="" /></a>
+			</section>
+			<section class="flex flex-col justify-between">
+				<div class="flex justify-end space-x-8 text-2xl">
+					<!-- icons will appear here  -->
+					<div class="flex space-x-6 bg-[#E9E9E9] p-2">
+						<!-- Facebook -->
+						<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<!-- YouTube -->
+						<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<!-- Instagram -->
+						<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<!-- Twitter -->
+						<a href="#" target="_blank" class="text-black hover:text-brp">
+							<i class="fa-brands fa-square-x-twitter"></i>
+						</a>
+						<!-- Telegram -->
+						<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+							<i class="fab fa-telegram"></i>
+						</a>
+						<!-- TikTok -->
+						<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+							<i class="fab fa-tiktok"></i>
+						</a>
+					</div>
+					<!-- language change will appear here  -->
+					<div>
+						<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+							<li>EN</li>
+							<li>বাং</li>
+						</ul>
+					</div>
+				</div>
+				<!-- menu will appear here  -->
+				<div>
+					<ul class="flex gap-4 items-center text-[20px] pb-2 pr-2">
+						<a href=""><li>প্রচ্ছদ</li></a>
+						<a href=""><li>পরিচিতি</li></a>
+						<a href=""><li>গঠনতন্ত্র</li></a>
+						<a href=""><li>রাজনৈতিক</li></a>
+						<a href=""><li>নীতি</li></a>
+						<a href=""><li>বিজ্ঞপ্তি</li></a>
+						<a href=""><li>সংবাদ</li></a>
+						<a href=""><li>যোগাযোগ</li></a>
+						<a href=""><li>লগইন</li></a>
+						<a href=""
+							><li class="px-4 py-1 rounded-full text-white mr-4 bg-brp">
+								সদস্য নিবন্ধন
+							</li></a
+						>
+					</ul>
+				</div>
+			</section>
+		</navbar>
+
+		<!-- main content area  -->
+		<main>
+			<!-- banner section  -->
+			<section></section>
+		</main>
+
+		<!-- footer area  -->
+		<footer >
+			<div >
+				<h1 class="text-[26px] font-bold py-5 text-center text-brp border-t-2">
+					বাংলাদেশ সংস্কারবাদী পার্টিতে যোগদিন
+				</h1>
+				<div class="bg-[#D2F8E9] grid grid-cols-3 p-4">
+					<div class="col-span-2 ">
+						<div class="flex gap-7 items-center">
+							<img src="/Assets//f-logo.png" alt="" />
+							<ul class="grid grid-flow-col grid-rows-2 gap-6 text-[15px]">
+								<a class="" href=""><li>প্রচ্ছদ</li></a>
+								<a class="" href=""><li>পরিচিতি</li></a>
+								<a class="" href=""><li>গঠনতন্ত্র</li></a>
+								<a class="" href=""><li>রাজনৈতিক</li></a>
+								<a class="" href=""><li>নীতি</li></a>
+								<a class="" href=""><li>বিজ্ঞপ্তি</li></a>
+								<a class="" href=""><li>সংবাদ</li></a>
+								<a class="" href=""><li>যোগাযোগ</li></a>
+							</ul>
+						</div>
+					</div>
+					<div class="grid grid-cols-2">
+						<div>
+							<h3 class="text-[20px] pb-2 text-center">আমাদের ফলো করুন</h3>
+							<div class="flex">
+								<div class="flex space-x-6 text-2xl bg-[#F2F2F2] p-2">
+									<!-- Facebook -->
+									<a
+										href="#"
+										target="_blank"
+										class="text-blue-600 hover:text-brp">
+										<i class="fab fa-facebook"></i>
+									</a>
+									<!-- YouTube -->
+									<a
+										href="#"
+										target="_blank"
+										class="text-red-600 hover:text-brp">
+										<i class="fab fa-youtube"></i>
+									</a>
+									<!-- Instagram -->
+									<a
+										href="#"
+										target="_blank"
+										class="text-pink-600 hover:text-brp">
+										<i class="fab fa-instagram"></i>
+									</a>
+									<!-- Twitter -->
+									<a href="#" target="_blank" class="text-black hover:text-brp">
+										<i class="fa-brands fa-square-x-twitter"></i>
+									</a>
+									<!-- Telegram -->
+									<a
+										href="#"
+										target="_blank"
+										class="text-blue-500 hover:text-brp">
+										<i class="fab fa-telegram"></i>
+									</a>
+									<!-- TikTok -->
+									<a
+										href="#"
+										target="_blank"
+										class="text-gray-800 hover:text-brp">
+										<i class="fab fa-tiktok"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container mx-auto text-center pt-4 text-[22px]">
+				<p>@2024 বাংলাদেশ সংস্কারবাদী পার্টি</p>
+			</div>
+		</footer>
+	</body>
 </html>
