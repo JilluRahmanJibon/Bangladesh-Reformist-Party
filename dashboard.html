@@ -40,16 +40,22 @@
 	<body class="max-w-[1536px] mx-auto">
 		<!-- Navbar -->
 		<nav>
-			<section class="flex justify-between items-center border-b">
+			<section class="grid grid-cols-3 justify-between items-center border-b">
 				<!-- Logo -->
-				<div>
-					<a href="/"
-						><img class="h-auto" src="Assets/logo.png" alt="Logo"
-					/></a>
+
+				<div class="col-span-2 lg:col-span-1 text-brp ml-5">
+					<a href="/">
+						<div class="flex items-center">
+							<img class="h-auto" src="Assets/logo.png" alt="Logo" />
+							<h1 class="sm:text-2xl text-xl text-inherit font-bold">
+								Bangladesh Reformist Party
+							</h1>
+						</div>
+					</a>
 				</div>
 
 				<!-- Icons, Language, and Menu (For large screens) -->
-				<div class="hidden lg:flex flex-col justify-between w-full">
+				<div class="hidden lg:flex flex-col justify-between w-full lg:col-span-2">
 					<!-- Social Icons and Language Selector -->
 					<div class="flex justify-end space-x-8 text-[18px]">
 						<!-- Social Icons -->
@@ -113,7 +119,7 @@
 				</div>
 
 				<!-- Hamburger Menu Button (For small screens) -->
-				<div class="lg:hidden">
+				<div class="lg:hidden text-end mr-5">
 					<button
 						id="menu-toggle"
 						class="text-3xl text-gray-600 focus:outline-none mr-2">

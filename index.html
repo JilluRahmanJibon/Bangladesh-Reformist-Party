@@ -40,16 +40,23 @@
 	<body class="max-w-[1536px] mx-auto">
 		<!-- Navbar -->
 		<nav>
-			<section class="flex justify-between items-center border-b">
+			<section class="grid grid-cols-3 justify-between items-center border-b">
 				<!-- Logo -->
-				<div>
-					<a href="/"
-						><img class="h-auto" src="Assets/logo.png" alt="Logo"
-					/></a>
+
+				<div class="col-span-2 lg:col-span-1 text-brp ml-5">
+					<a href="/">
+						<div class="flex items-center">
+							<img class="h-auto" src="Assets/logo.png" alt="Logo" />
+							<h1 class="sm:text-2xl text-xl text-inherit font-bold">
+								Bangladesh Reformist Party
+							</h1>
+						</div>
+					</a>
 				</div>
 
 				<!-- Icons, Language, and Menu (For large screens) -->
-				<div class="hidden lg:flex flex-col justify-between w-full">
+				<div
+					class="hidden lg:flex flex-col justify-between w-full lg:col-span-2">
 					<!-- Social Icons and Language Selector -->
 					<div class="flex justify-end space-x-8 text-[18px]">
 						<!-- Social Icons -->
@@ -100,7 +107,9 @@
 							<li><a href="/contact.html">যোগাযোগ</a></li>
 							<li><a href="#">লগইন</a></li>
 							<li>
-								<a href="/form.html" class="px-4 py-1 rounded-full text-white bg-brp">
+								<a
+									href="/form.html"
+									class="px-4 py-1 rounded-full text-white bg-brp">
 									সদস্য নিবন্ধন
 								</a>
 							</li>
@@ -109,7 +118,7 @@
 				</div>
 
 				<!-- Hamburger Menu Button (For small screens) -->
-				<div class="lg:hidden">
+				<div class="lg:hidden text-end mr-5">
 					<button
 						id="menu-toggle"
 						class="text-3xl text-gray-600 focus:outline-none mr-2">
@@ -119,7 +128,7 @@
 			</section>
 
 			<!-- Mobile Menu (hidden by default) -->
-			<div id="mobile-menu" class="hidden lg:hidden bg-white p-4">
+			<div id="mobile-menu" class="hidden lg:hidden bg-white p-6">
 				<ul class="flex flex-col gap-4">
 					<li><a href="#">প্রচ্ছদ</a></li>
 					<li><a href="#">পরিচিতি</a></li>
@@ -318,7 +327,15 @@
 				<div class="rounded-lg overflow-hidden">
 					<!-- Image with Play Icon Overlay -->
 					<div class="relative">
-						<iframe width="100%" height="220" src="https://www.youtube.com/embed/BP33qotGR6c" title="হামাস নির্মূলে ব্যর্থ ইসরায়েল, ধ্বংসস্তূপ থেকেই গড়ে তুলছে প্রতিরোধ | Israel | Hamas |Jamuna TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe
+							width="100%"
+							height="220"
+							src="https://www.youtube.com/embed/BP33qotGR6c"
+							title="হামাস নির্মূলে ব্যর্থ ইসরায়েল, ধ্বংসস্তূপ থেকেই গড়ে তুলছে প্রতিরোধ | Israel | Hamas |Jamuna TV"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
 						<!-- <img
 							src="https://i.ytimg.com/vi/zM9JvDdv8BQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDYcPT8dgkxPVC94TAng45iak45Q"
 							alt="Video thumbnail"
@@ -333,12 +350,12 @@
 					<div class="flex items-center gap-2 justify-between p-4">
 						<!-- Small Logo -->
 						<img
-							src="/Assets/f-logo.png"
+							src="/Assets/logo.png"
 							alt="Logo"
 							class="w-10 h-10 rounded-full" />
 						<!-- Title -->
 						<h3 class="text-lg font-semibold">
-							এবার ছয় আরব দেশকে ইরানের হুঁশিয়ারি 
+							এবার ছয় আরব দেশকে ইরানের হুঁশিয়ারি
 						</h3>
 					</div>
 				</div>
@@ -347,7 +364,15 @@
 				<div class="rounded-lg overflow-hidden">
 					<!-- Image with Play Icon Overlay -->
 					<div class="relative">
-						<iframe width="100%" height="220" src="https://www.youtube.com/embed/JmqM-x1tgjA" title="লে’বানন সীমান্ত থেকে পালিয়ে যাচ্ছে ই’সরা’ই’লি সে’নারা | Israel | Lebanon | Hezbollah | IDF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe
+							width="100%"
+							height="220"
+							src="https://www.youtube.com/embed/JmqM-x1tgjA"
+							title="লে’বানন সীমান্ত থেকে পালিয়ে যাচ্ছে ই’সরা’ই’লি সে’নারা | Israel | Lebanon | Hezbollah | IDF"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
 						<!-- <img
 							src="https://i.ytimg.com/vi/zM9JvDdv8BQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDYcPT8dgkxPVC94TAng45iak45Q"
 							alt="Video thumbnail"
@@ -362,19 +387,27 @@
 					<div class="flex items-center gap-2 justify-between p-4">
 						<!-- Small Logo -->
 						<img
-							src="/Assets/f-logo.png"
+							src="/Assets/logo.png"
 							alt="Logo"
 							class="w-10 h-10 rounded-full" />
 						<!-- Title -->
 						<h3 class="text-lg font-semibold">
-							এবার ছয় আরব দেশকে ইরানের হুঁশিয়ারি 
+							এবার ছয় আরব দেশকে ইরানের হুঁশিয়ারি
 						</h3>
 					</div>
 				</div>
 				<div class="rounded-lg overflow-hidden">
 					<!-- Image with Play Icon Overlay -->
 					<div class="relative">
-						<iframe width="100%" height="220" src="https://www.youtube.com/embed/_HIbGmfefik" title="প্রস্তুত ই/রা/নে/র এক হাজার মি/সা/ই/ল, একসাথে ছুঁড়বে ই/স/রা/ই/লে | Iran Missile | Ekattor TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe
+							width="100%"
+							height="220"
+							src="https://www.youtube.com/embed/_HIbGmfefik"
+							title="প্রস্তুত ই/রা/নে/র এক হাজার মি/সা/ই/ল, একসাথে ছুঁড়বে ই/স/রা/ই/লে | Iran Missile | Ekattor TV"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
 						<!-- <img
 							src="https://i.ytimg.com/vi/zM9JvDdv8BQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDYcPT8dgkxPVC94TAng45iak45Q"
 							alt="Video thumbnail"
@@ -389,7 +422,7 @@
 					<div class="flex items-center gap-2 justify-between p-4">
 						<!-- Small Logo -->
 						<img
-							src="/Assets/f-logo.png"
+							src="/Assets/logo.png"
 							alt="Logo"
 							class="w-10 h-10 rounded-full" />
 						<!-- Title -->
@@ -415,7 +448,7 @@
 					<!-- Logo and Navigation Links -->
 					<div class="md:col-span-2">
 						<div class="flex flex-col md:flex-row gap-7 items-center">
-							<img src="/Assets/f-logo.png" alt="Logo" class="w-24 h-auto" />
+							<img src="/Assets/logo.png" alt="Logo" class="w-24 h-auto" />
 							<ul
 								class="grid grid-cols-2 gap-4 md:grid-flow-col md:grid-rows-2 font-bold text-[14px] md:text-[15px]">
 								<li><a href="#">প্রচ্ছদ</a></li>
