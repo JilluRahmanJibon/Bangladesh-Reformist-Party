@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangladesh Reformist Party</title>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- FontAwesome CDN -->
+		<script
+			src="https://kit.fontawesome.com/ae3f90b708.js"
+			crossorigin="anonymous"></script>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- Tailwind Custom Configuration -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							brp: "#0C611C",
+						},
+						fontFamily: {
+							sans: ['"Noto Sans Bengali"', "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+
+		<!-- Custom Styles (if any) -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="max-w-[1536px] mx-auto">
+		<!-- Navbar -->
+		<nav>
+			<section class="flex justify-between items-center border-b">
+				<!-- Logo -->
+				<div>
+					<a href="/"
+						><img class="h-auto" src="Assets/logo.png" alt="Logo"
+					/></a>
+				</div>
+
+				<!-- Icons, Language, and Menu (For large screens) -->
+				<div class="hidden lg:flex flex-col justify-between w-full">
+					<!-- Social Icons and Language Selector -->
+					<div class="flex justify-end space-x-8 text-[18px]">
+						<!-- Social Icons -->
+						<div class="flex space-x-6 bg-[#E9E9E9] p-2">
+							<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-black hover:text-brp">
+								<i class="fa-brands fa-square-x-twitter"></i>
+							</a>
+							<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+								<i class="fab fa-telegram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+								<i class="fab fa-tiktok"></i>
+							</a>
+						</div>
+
+						<!-- Language Selector -->
+						<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+							<li><button class="bg-white rounded px-1">EN</button></li>
+							<li>
+								<button
+									class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+									বাং
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Menu -->
+					<div class="mt-2 mr-4 pb-3">
+						<ul
+							class="flex gap-4 items-center justify-end text-[15px] font-bold">
+							<li><a href="#">প্রচ্ছদ</a></li>
+							<li><a href="#">পরিচিতি</a></li>
+							<li><a href="#">গঠনতন্ত্র</a></li>
+							<li><a href="#">রাজনৈতিক</a></li>
+							<li><a href="#">নীতি</a></li>
+							<li><a href="#">বিজ্ঞপ্তি</a></li>
+							<li><a href="#">সংবাদ</a></li>
+							<li><a href="#">যোগাযোগ</a></li>
+							<li class="flex flex-col gap-1 items-center">
+								<a
+									href="#"
+									class="px-6 py-1 text-[16px] rounded-full text-white bg-[#CFBA4C]">
+									পদবী
+								</a>
+								<a href="#" class="px-4 py-1 text-[16px] rounded-full">
+									লগআউট
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Hamburger Menu Button (For small screens) -->
+				<div class="lg:hidden">
+					<button
+						id="menu-toggle"
+						class="text-3xl text-gray-600 focus:outline-none mr-2">
+						<i class="fas fa-bars"></i>
+					</button>
+				</div>
+			</section>
+
+			<!-- Mobile Menu (hidden by default) -->
+			<div id="mobile-menu" class="hidden lg:hidden bg-white p-4">
+				<ul class="flex flex-col gap-4">
+					<li><a href="#">প্রচ্ছদ</a></li>
+					<li><a href="#">পরিচিতি</a></li>
+					<li><a href="#">গঠনতন্ত্র</a></li>
+					<li><a href="#">রাজনৈতিক</a></li>
+					<li><a href="#">নীতি</a></li>
+					<li><a href="#">বিজ্ঞপ্তি</a></li>
+					<li><a href="#">সংবাদ</a></li>
+					<li><a href="#">যোগাযোগ</a></li>
+					<li><a href="#">লগইন</a></li>
+					<li class="flex flex-col gap-1 items-center">
+						<a
+							href="#"
+							class="px-6 py-1 text-[16px] rounded-full text-white bg-[#CFBA4C]">
+							পদবী
+						</a>
+						<a href="#" class="px-4 py-1 text-[16px] rounded-full"> লগআউট </a>
+					</li>
+				</ul>
+
+				<!-- Social Icons (on mobile) -->
+				<div class="flex justify-center space-x-6 bg-[#E9E9E9] p-4 mt-4">
+					<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+						<i class="fab fa-youtube"></i>
+					</a>
+					<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-black hover:text-brp">
+						<i class="fa-brands fa-square-x-twitter"></i>
+					</a>
+					<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+						<i class="fab fa-telegram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+						<i class="fab fa-tiktok"></i>
+					</a>
+				</div>
+
+				<!-- Language Selector (on mobile) -->
+				<div class="flex justify-center mt-4">
+					<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+						<li><button class="bg-white rounded px-1">EN</button></li>
+						<li>
+							<button
+								class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+								বাং
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content Area -->
+		<main>
+			<div class="flex h-screen overflow-hidden">
+				<!-- First Column: Navigation Sidebar -->
+				<aside class="w-64 bg-[#E6F9F2]  shadow-md p-4 hidden sm:flex flex-col">
+					<!-- User Info -->
+					<div class="flex items-center mb-8">
+						<img
+							src="https://via.placeholder.com/50"
+							alt="User Logo"
+							class="w-12 h-12 rounded-full mr-3" />
+
+						<div>
+							<h2 class="text-xl font-bold">User Name</h2>
+							<p class="text-sm text-gray-500">user@example.com</p>
+						</div>
+					</div>
+					<!-- Navigation Links -->
+					<nav class="flex-1">
+						<ul>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 bg-brp text-white rounded">
+									<i class="fas fa-edit mr-3"></i>
+									Compose
+								</a>
+							</li>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 text-gray-700 hover:bg-brp hover:text-white rounded">
+									<i class="fas fa-inbox mr-3"></i>
+									Inbox (99)
+								</a>
+							</li>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 text-gray-700 hover:bg-brp hover:text-white rounded">
+									<i class="fas fa-paper-plane mr-3"></i>
+									Sent
+								</a>
+							</li>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 text-gray-700 hover:bg-brp hover:text-white rounded">
+									<i class="fas fa-user mr-3"></i>
+									Profile
+								</a>
+							</li>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 text-gray-700 hover:bg-brp hover:text-white rounded">
+									<i class="fas fa-cog mr-3"></i>
+									Settings
+								</a>
+							</li>
+							<li class="mb-2">
+								<a
+									href="#"
+									class="flex items-center p-2 text-gray-700 hover:bg-brp hover:text-white rounded">
+									<i class="fas fa-file-alt mr-3"></i>
+									MyPosts
+								</a>
+							</li>
+						</ul>
+					</nav>
+					 
+				</aside>
+
+				<!-- Second Column: Main Content Area -->
+				<main class="flex-1 overflow-y-auto p-6">
+					<!-- New Post Section -->
+				 <section class=" bg-[#E6F9F2] p-4 mb-4">
+<div class="flex items-center mb-8">
+						<img
+							src="https://via.placeholder.com/50"
+							alt="User Logo"
+							class="w-12 h-12 rounded-full mr-3" />
+
+						<div class="bg-[#F1F1F1]  py-6 w-full rounded-full">
+							
+						</div>
+					</div>
+					<div class="flex justify-center items-center gap-2">
+						<svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.001 512.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#B4BBCC;" d="M470.632,37.377H41.368C18.521,37.377,0,55.898,0,78.744v354.511 c0,22.846,18.521,41.368,41.368,41.368h429.265c22.846,0,41.368-18.521,41.368-41.368V78.744 C512,55.898,493.479,37.377,470.632,37.377z"></path> <path style="fill:#A6E7FF;" d="M473.083,233.282V102.615c0-14.537-11.784-26.321-26.321-26.321H65.238 c-14.537,0-26.321,11.784-26.321,26.321v240.014l50.002,45.511L473.083,233.282z"></path> <path style="fill:#FFFFFF;" d="M38.909,158.803c9.339-7.358,21.125-11.747,33.937-11.747c24.26,0,44.829,15.746,52.081,37.571 c8.774-5.142,18.98-8.101,29.884-8.101c30.261,0,55.202,22.707,58.757,52.009c25.772,2.769,46.005,24.044,47.129,50.275 l-63.977,62.539l-157.801,1.281L38.909,158.803z"></path> <path style="fill:#6C994E;" d="M157.978,310.558c0,0-68.733-25.906-119.062,32.07v66.756c0,14.537,11.784,26.321,26.321,26.321 l104.657-79.174L157.978,310.558z"></path> <path style="opacity:0.1;enable-background:new ;" d="M38.917,377.353c50.329-57.976,119.062-32.07,119.062-32.07l4.391,16.942 l7.525-5.692l-11.916-45.974c0,0-68.733-25.906-119.062,32.07L38.917,377.353L38.917,377.353z"></path> <path style="fill:#7EB35B;" d="M65.238,435.706c34.925-92.71,144.432-202.073,235.563-140.329l-30.288,97.379l-77.076,42.951H65.238 z"></path> <path style="opacity:0.1;enable-background:new ;" d="M297.67,305.443l3.131-10.067 c-91.132-61.743-200.638,47.619-235.563,140.329h33.258C136.835,358.195,220.491,279.891,297.67,305.443z"></path> <path style="fill:#A5EB78;" d="M473.083,409.385V233.282c-175.29-17.428-279.647,202.424-279.647,202.424h253.326 C461.299,435.706,473.083,423.922,473.083,409.385z"></path> <path style="opacity:0.1;enable-background:new ;" d="M473.083,255.484v-22.203c-175.29-17.428-279.647,202.424-279.647,202.424 h35.651C259.816,382.858,345.907,257.695,473.083,255.484z"></path> <circle style="fill:#FFE97A;" cx="343.505" cy="173.957" r="37.155"></circle> <path style="opacity:0.1;enable-background:new ;" d="M317.935,185.533c0-20.517,16.633-37.15,37.15-37.15 c7.294,0,14.092,2.111,19.832,5.743c-6.584-10.405-18.184-17.318-31.407-17.318c-20.517,0-37.15,16.633-37.15,37.15 c0,13.223,6.914,24.823,17.318,31.407C320.046,199.626,317.935,192.828,317.935,185.533z"></path> </g></svg>
+						<p >Photo/Video</p>
+					</div>
+				 </section>
+
+					<!-- Demo Post -->
+					<section class="mb-8">
+						<!-- Single Post -->
+						<div class="bg-[#E6F9F2] p-6 rounded-lg shadow mb-4">
+							<div class="flex items-center mb-4">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">05 October, 2024 | Dhaka</p>
+								</div>
+							</div>
+							<p class="mb-4">
+								যদিও সেপ্টেম্বরে হাডসন ইনস্টিটিউট থিংক ট্যাংকের এক গবেষণাপত্রে ইশিবা যুক্তি দেন, ওয়াশিংটনকে পাশে রেখে একটি 'এশীয় ন্যাটো' গঠন করা হলে এশিয়ায় সামরিক শক্তিমত্তা প্রদর্শনে বিরত হবে চীন।
+ইওয়াইয়া বলেন, "সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা, যা কোনো সুনির্দিষ্ট দেশকে বাদ না রেখেই সম্পূর্ণ ইন্দো-প্যাসিফিক অঞ্চলে কার্যকর থাকবে।"
+আর জাপানের নবনিযুক্ত প্রতিরক্ষামন্ত্রী জেনারেল নাকাতানি পৃথক এক সংবাদ সম্মেলনে জানান, ইশিবা এখনো তার মন্ত্রণালয়কে এশিয়ায় ন্যাটোর সমতুল্য কোনো সংগঠন সৃষ্টির প্রস্তাব তৈরি করতে বলেননি।
+
+							</p>
+							<img
+								src="https://via.placeholder.com/600x400"
+								alt="Post Photo"
+								class="w-full md:h-[400px] rounded-md mb-4" />
+							<div class="flex items-center space-x-4 bg-[#F1F1F1] py-3 px-2">
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-up mr-2"></i> 23
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-down mr-2"></i> 5
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-comment mr-2"></i> Comments
+								</button>
+							</div>
+							<div class="flex items-center mt-4 bg-[#F1F1F1]">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-[#E6F9F2] p-6 rounded-lg shadow mb-4">
+							<div class="flex items-center mb-4">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">05 October, 2024 | Dhaka</p>
+								</div>
+							</div>
+							<p class="mb-4">
+								যদিও সেপ্টেম্বরে হাডসন ইনস্টিটিউট থিংক ট্যাংকের এক গবেষণাপত্রে ইশিবা যুক্তি দেন, ওয়াশিংটনকে পাশে রেখে একটি 'এশীয় ন্যাটো' গঠন করা হলে এশিয়ায় সামরিক শক্তিমত্তা প্রদর্শনে বিরত হবে চীন।
+ইওয়াইয়া বলেন, "সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা, যা কোনো সুনির্দিষ্ট দেশকে বাদ না রেখেই সম্পূর্ণ ইন্দো-প্যাসিফিক অঞ্চলে কার্যকর থাকবে।"
+আর জাপানের নবনিযুক্ত প্রতিরক্ষামন্ত্রী জেনারেল নাকাতানি পৃথক এক সংবাদ সম্মেলনে জানান, ইশিবা এখনো তার মন্ত্রণালয়কে এশিয়ায় ন্যাটোর সমতুল্য কোনো সংগঠন সৃষ্টির প্রস্তাব তৈরি করতে বলেননি।
+
+							</p>
+							<img
+								src="https://via.placeholder.com/600x400"
+								alt="Post Photo"
+								class="w-full md:h-[400px] rounded-md mb-4" />
+							<div class="flex items-center space-x-4 bg-[#F1F1F1] py-3 px-2">
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-up mr-2"></i> 23
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-down mr-2"></i> 5
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-comment mr-2"></i> Comments
+								</button>
+							</div>
+							<div class="flex items-center mt-4 bg-[#F1F1F1]">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-[#E6F9F2] p-6 rounded-lg shadow mb-4">
+							<div class="flex items-center mb-4">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">05 October, 2024 | Dhaka</p>
+								</div>
+							</div>
+							<p class="mb-4">
+								যদিও সেপ্টেম্বরে হাডসন ইনস্টিটিউট থিংক ট্যাংকের এক গবেষণাপত্রে ইশিবা যুক্তি দেন, ওয়াশিংটনকে পাশে রেখে একটি 'এশীয় ন্যাটো' গঠন করা হলে এশিয়ায় সামরিক শক্তিমত্তা প্রদর্শনে বিরত হবে চীন।
+ইওয়াইয়া বলেন, "সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা, যা কোনো সুনির্দিষ্ট দেশকে বাদ না রেখেই সম্পূর্ণ ইন্দো-প্যাসিফিক অঞ্চলে কার্যকর থাকবে।"
+আর জাপানের নবনিযুক্ত প্রতিরক্ষামন্ত্রী জেনারেল নাকাতানি পৃথক এক সংবাদ সম্মেলনে জানান, ইশিবা এখনো তার মন্ত্রণালয়কে এশিয়ায় ন্যাটোর সমতুল্য কোনো সংগঠন সৃষ্টির প্রস্তাব তৈরি করতে বলেননি।
+
+							</p>
+							<img
+								src="https://via.placeholder.com/600x400"
+								alt="Post Photo"
+								class="w-full md:h-[400px] rounded-md mb-4" />
+							<div class="flex items-center space-x-4 bg-[#F1F1F1] py-3 px-2">
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-up mr-2"></i> 23
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-thumbs-down mr-2"></i> 5
+								</button>
+								<button class="flex items-center text-brp">
+									<i class="fas fa-comment mr-2"></i> Comments
+								</button>
+							</div>
+							<div class="flex items-center mt-4 bg-[#F1F1F1]">
+								<img
+									src="https://via.placeholder.com/40"
+									alt="User Logo"
+									class="w-10 h-10 rounded-full mr-3" />
+								<div>
+									<h4 class="font-bold">User Name</h4>
+									<p class="text-sm text-gray-500">সবচেয়ে ভালো উপায় হবে প্রতিরক্ষা ও নিরাপত্তা নিশ্চিতে পারস্পরিক সহযোগিতার সম্পর্ক সৃষ্টি করা</p>
+								</div>
+							</div>
+						</div>
+
+					 
+					</section>
+				</main>
+
+				<!-- Third Column: Districts and Calendar Filtering -->
+				<aside
+					class="w-64 bg-[#E6F9F2] shadow-md p-4 overflow-y-auto hidden lg:block">
+					<!-- Districts List -->
+					<div class="mb-8">
+						<h3 class="text-xl bg-[#82A388] px-2 py-4 text-center rounded-2xl font-bold mb-4">জেলা ভিত্তিক পোস্ট</h3>
+						<ul class="space-y-2 flex flex-col items-center">
+							<!-- List of Districts (Example) -->
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">ঢাকা </a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">চট্টগ্রাম </a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">সিলেট</a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">Khulna</a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">Barisal</a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">Sylhet</a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">Rangpur</a>
+							</li>
+							<li>
+								<a href="#" class="text-gray-700 hover:text-brp">Mymensingh</a>
+							</li>
+							<!-- Add more districts as needed -->
+						</ul>
+					</div>
+
+					<!-- Calendar Filtering -->
+					<div>
+						<h3 class="text-xl font-bold mb-4">Filter by Date</h3>
+						<input
+							type="date"
+							class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-brp focus:border-brp" />
+					</div>
+				</aside>
+			</div>
+		</main>
+
+		<!-- Script to Toggle the Mobile Menu -->
+		<script>
+			const menuToggle = document.getElementById("menu-toggle");
+			const mobileMenu = document.getElementById("mobile-menu");
+
+			menuToggle.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+		</script>
+	</body>
+</html>

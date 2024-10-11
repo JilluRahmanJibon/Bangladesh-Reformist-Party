@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangladesh Reformist Party</title>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- FontAwesome CDN -->
+		<script
+			src="https://kit.fontawesome.com/ae3f90b708.js"
+			crossorigin="anonymous"></script>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- Tailwind Custom Configuration -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							brp: "#0C611C",
+						},
+						fontFamily: {
+							sans: ['"Noto Sans Bengali"', "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+
+		<!-- Custom Styles (if any) -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="max-w-[1536px] mx-auto">
+		<!-- Navbar -->
+		<nav>
+			<section class="flex justify-between items-center border-b">
+				<!-- Logo -->
+				<div>
+					<a href="/"
+						><img class="h-auto" src="Assets/logo.png" alt="Logo"
+					/></a>
+				</div>
+
+				<!-- Icons, Language, and Menu (For large screens) -->
+				<div class="hidden lg:flex flex-col justify-between w-full">
+					<!-- Social Icons and Language Selector -->
+					<div class="flex justify-end space-x-8 text-[18px]">
+						<!-- Social Icons -->
+						<div class="flex space-x-6 bg-[#E9E9E9] p-2">
+							<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-black hover:text-brp">
+								<i class="fa-brands fa-square-x-twitter"></i>
+							</a>
+							<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+								<i class="fab fa-telegram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+								<i class="fab fa-tiktok"></i>
+							</a>
+						</div>
+
+						<!-- Language Selector -->
+						<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+							<li><button class="bg-white rounded px-1">EN</button></li>
+							<li>
+								<button
+									class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+									বাং
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Menu -->
+					<div class="mt-10 mr-4 pb-3">
+						<ul
+							class="flex gap-4 items-center justify-end text-[15px] font-bold">
+							<li><a href="#">প্রচ্ছদ</a></li>
+							<li><a href="#">পরিচিতি</a></li>
+							<li><a href="#">গঠনতন্ত্র</a></li>
+							<li><a href="#">রাজনৈতিক</a></li>
+							<li><a href="#">নীতি</a></li>
+							<li><a href="#">বিজ্ঞপ্তি</a></li>
+							<li><a href="#">সংবাদ</a></li>
+							<li><a href="#">যোগাযোগ</a></li>
+							<li><a href="#">লগইন</a></li>
+							<li>
+								<a href="#" class="px-4 py-1 rounded-full text-white bg-brp">
+									সদস্য নিবন্ধন
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Hamburger Menu Button (For small screens) -->
+				<div class="lg:hidden">
+					<button
+						id="menu-toggle"
+						class="text-3xl text-gray-600 focus:outline-none mr-2">
+						<i class="fas fa-bars"></i>
+					</button>
+				</div>
+			</section>
+
+			<!-- Mobile Menu (hidden by default) -->
+			<div id="mobile-menu" class="hidden lg:hidden bg-white p-4">
+				<ul class="flex flex-col gap-4">
+					<li><a href="#">প্রচ্ছদ</a></li>
+					<li><a href="#">পরিচিতি</a></li>
+					<li><a href="#">গঠনতন্ত্র</a></li>
+					<li><a href="#">রাজনৈতিক</a></li>
+					<li><a href="#">নীতি</a></li>
+					<li><a href="#">বিজ্ঞপ্তি</a></li>
+					<li><a href="#">সংবাদ</a></li>
+					<li><a href="#">যোগাযোগ</a></li>
+					<li><a href="#">লগইন</a></li>
+					<li>
+						<a href="#" class="px-4 py-1 rounded-full text-white bg-brp">
+							সদস্য নিবন্ধন
+						</a>
+					</li>
+				</ul>
+
+				<!-- Social Icons (on mobile) -->
+				<div class="flex justify-center space-x-6 bg-[#E9E9E9] p-4 mt-4">
+					<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+						<i class="fab fa-youtube"></i>
+					</a>
+					<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-black hover:text-brp">
+						<i class="fa-brands fa-square-x-twitter"></i>
+					</a>
+					<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+						<i class="fab fa-telegram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+						<i class="fab fa-tiktok"></i>
+					</a>
+				</div>
+
+				<!-- Language Selector (on mobile) -->
+				<div class="flex justify-center mt-4">
+					<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+						<li><button class="bg-white rounded px-1">EN</button></li>
+						<li>
+							<button
+								class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+								বাং
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content Area -->
+		<main class="mb-12 md:px-12 sm:px-6 ">
+			<!-- Contact Section -->
+			<section class="py-12 px-4">
+				<div class="max-w-7xl mx-auto">
+					<div class="flex flex-col lg:flex-row lg:space-x-8">
+						<!-- Contact Form -->
+						<div class="lg:w-1/2 bg-white p-6 rounded-lg">
+							<form action="#" method="POST" class="space-y-6">
+								<!-- Name Field -->
+								<div>
+									<label
+										for="name"
+										class="block text-sm font-medium text-gray-700"
+										>Name</label
+									>
+									<input
+										type="text"
+										id="name"
+										name="name"
+										required
+										placeholder="Name"
+										class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+								</div>
+
+								<!-- Email Field -->
+								<div>
+									<label
+										for="email"
+										class="block text-sm font-medium text-gray-700"
+										>Email</label
+									>
+									<input
+										type="email"
+										id="email"
+										name="email"
+										required
+										placeholder="Email"
+										class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+								</div>
+
+								<!-- Mobile Number Field -->
+								<div>
+									<label
+										for="mobile"
+										class="block text-sm font-medium text-gray-700"
+										>Mobile Number</label
+									>
+									<input
+										type="tel"
+										id="mobile"
+										name="mobile"
+										required
+										placeholder="Mobile Number"
+										class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+								</div>
+
+								<!-- Message Field -->
+								<div>
+									<label
+										for="message"
+										class="block text-sm font-medium text-gray-700"
+										>Message</label
+									>
+									<textarea
+										id="message"
+										name="message"
+										rows="4"
+										required
+										placeholder="Message"
+										class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp"></textarea>
+								</div>
+
+								<!-- Submit Button -->
+								<div>
+									<button
+										type="submit"
+										class="bg-[#61CE70] text-white py-2 px-12 rounded-md hover:bg-green-700 transition duration-300">
+										Send
+									</button>
+								</div>
+							</form>
+						</div>
+
+						<!-- Google Map -->
+						<div class="lg:w-1/2 mt-8 lg:mt-0">
+							<div class="rounded-lg overflow-hidden">
+								<!-- Replace the src attribute with your desired Google Maps embed link -->
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9060588241975!2d90.41251831502047!3d23.81033228457077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c72c08dbf5f5%3A0x3a7f9b3ed4ed2c9c!2sDhaka%20University!5e0!3m2!1sen!2sbd!4v1665738064672!5m2!1sen!2sbd"
+									width="100%"
+									height="500"
+									style="border: 0"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer Area -->
+		<footer>
+			<!-- Call to Action Section -->
+			<div>
+				<h1
+					class="text-[20px] md:text-[26px] font-bold py-5 text-center text-brp border-t-2">
+					বাংলাদেশ সংস্কারবাদী পার্টিতে যোগদিন
+				</h1>
+
+				<!-- Footer Content Grid -->
+				<div class="bg-[#D2F8E9] grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+					<!-- Logo and Navigation Links -->
+					<div class="md:col-span-2">
+						<div class="flex flex-col md:flex-row gap-7 items-center">
+							<img src="/Assets/f-logo.png" alt="Logo" class="w-24 h-auto" />
+							<ul
+								class="grid grid-cols-2 gap-4 md:grid-flow-col md:grid-rows-2 font-bold text-[14px] md:text-[15px]">
+								<li><a href="#">প্রচ্ছদ</a></li>
+								<li><a href="#">পরিচিতি</a></li>
+								<li><a href="#">গঠনতন্ত্র</a></li>
+								<li><a href="#">রাজনৈতিক</a></li>
+								<li><a href="#">নীতি</a></li>
+								<li><a href="#">বিজ্ঞপ্তি</a></li>
+								<li><a href="#">সংবাদ</a></li>
+								<li><a href="#">যোগাযোগ</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Social Media Section -->
+					<div class="flex flex-col items-center">
+						<h3 class="text-[18px] md:text-[20px] pb-2 text-center">
+							আমাদের ফলো করুন
+						</h3>
+						<div
+							class="flex space-x-6 text-2xl bg-[#F2F2F2] p-2 justify-center">
+							<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-black hover:text-brp">
+								<i class="fa-brands fa-square-x-twitter"></i>
+							</a>
+							<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+								<i class="fab fa-telegram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+								<i class="fab fa-tiktok"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div
+				class="container mx-auto text-center py-6 text-[18px] md:text-[22px]">
+				<p>@2024 বাংলাদেশ সংস্কারবাদী পার্টি</p>
+			</div>
+		</footer>
+
+		<!-- Script to Toggle the Mobile Menu -->
+		<script>
+			const menuToggle = document.getElementById("menu-toggle");
+			const mobileMenu = document.getElementById("mobile-menu");
+
+			menuToggle.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+		</script>
+	</body>
+</html>

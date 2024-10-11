@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangladesh Reformist Party</title>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- FontAwesome CDN -->
+		<script
+			src="https://kit.fontawesome.com/ae3f90b708.js"
+			crossorigin="anonymous"></script>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- Tailwind Custom Configuration -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							brp: "#0C611C",
+						},
+						fontFamily: {
+							sans: ['"Noto Sans Bengali"', "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+
+		<!-- Custom Styles (if any) -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="max-w-[1536px] mx-auto">
+		<!-- Navbar -->
+		<nav>
+			<section class="flex justify-between items-center border-b">
+				<!-- Logo -->
+				<div>
+					<a href="/"
+						><img class="h-auto" src="Assets/logo.png" alt="Logo"
+					/></a>
+				</div>
+
+				<!-- Icons, Language, and Menu (For large screens) -->
+				<div class="hidden lg:flex flex-col justify-between w-full">
+					<!-- Social Icons and Language Selector -->
+					<div class="flex justify-end space-x-8 text-[18px]">
+						<!-- Social Icons -->
+						<div class="flex space-x-6 bg-[#E9E9E9] p-2">
+							<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-black hover:text-brp">
+								<i class="fa-brands fa-square-x-twitter"></i>
+							</a>
+							<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+								<i class="fab fa-telegram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+								<i class="fab fa-tiktok"></i>
+							</a>
+						</div>
+
+						<!-- Language Selector -->
+						<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+							<li><button class="bg-white rounded px-1">EN</button></li>
+							<li>
+								<button
+									class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+									বাং
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Menu -->
+					<div class="mt-10 mr-4 pb-3">
+						<ul
+							class="flex gap-4 items-center justify-end text-[15px] font-bold">
+							<li><a href="#">প্রচ্ছদ</a></li>
+							<li><a href="#">পরিচিতি</a></li>
+							<li><a href="#">গঠনতন্ত্র</a></li>
+							<li><a href="#">রাজনৈতিক</a></li>
+							<li><a href="#">নীতি</a></li>
+							<li><a href="#">বিজ্ঞপ্তি</a></li>
+							<li><a href="#">সংবাদ</a></li>
+							<li><a href="#">যোগাযোগ</a></li>
+							<li><a href="#">লগইন</a></li>
+							<li>
+								<a href="#" class="px-4 py-1 rounded-full text-white bg-brp">
+									সদস্য নিবন্ধন
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Hamburger Menu Button (For small screens) -->
+				<div class="lg:hidden">
+					<button
+						id="menu-toggle"
+						class="text-3xl text-gray-600 focus:outline-none mr-2">
+						<i class="fas fa-bars"></i>
+					</button>
+				</div>
+			</section>
+
+			<!-- Mobile Menu (hidden by default) -->
+			<div id="mobile-menu" class="hidden lg:hidden bg-white p-4">
+				<ul class="flex flex-col gap-4">
+					<li><a href="#">প্রচ্ছদ</a></li>
+					<li><a href="#">পরিচিতি</a></li>
+					<li><a href="#">গঠনতন্ত্র</a></li>
+					<li><a href="#">রাজনৈতিক</a></li>
+					<li><a href="#">নীতি</a></li>
+					<li><a href="#">বিজ্ঞপ্তি</a></li>
+					<li><a href="#">সংবাদ</a></li>
+					<li><a href="#">যোগাযোগ</a></li>
+					<li><a href="#">লগইন</a></li>
+					<li>
+						<a href="#" class="px-4 py-1 rounded-full text-white bg-brp">
+							সদস্য নিবন্ধন
+						</a>
+					</li>
+				</ul>
+
+				<!-- Social Icons (on mobile) -->
+				<div class="flex justify-center space-x-6 bg-[#E9E9E9] p-4 mt-4">
+					<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+						<i class="fab fa-youtube"></i>
+					</a>
+					<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-black hover:text-brp">
+						<i class="fa-brands fa-square-x-twitter"></i>
+					</a>
+					<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+						<i class="fab fa-telegram"></i>
+					</a>
+					<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+						<i class="fab fa-tiktok"></i>
+					</a>
+				</div>
+
+				<!-- Language Selector (on mobile) -->
+				<div class="flex justify-center mt-4">
+					<ul class="flex gap-2 bg-[#E9E9E9] p-2">
+						<li><button class="bg-white rounded px-1">EN</button></li>
+						<li>
+							<button
+								class="bg-gradient-to-r from-red-500 to-[#0C611C] text-white rounded px-1">
+								বাং
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content Area -->
+		<main class="my-12 md:px-12 sm:px-6">
+			<section class="md:w-1/2 mx-auto">
+				<div class="text-white text-xl mb-6 lg:flex space-y-2 gap-4 px-3 lg:px-0">
+					<h1 class="bg-brp lg:w-1/2 py-2 px-4 text-center">
+						বাংলাদেশ সংস্কারবাদী পার্টি (বিআরপি) সদস্যপদ শর্তাবলী
+					</h1>
+					<h1 class="bg-brp lg:w-1/2 py-2 px-4 text-center">
+						Bangladesh Reformist Party (BRP) Membership Terms & Conditions
+					</h1>
+				</div>
+
+				<div class=" lg:w-10/12 bg-white p-6 rounded-lg">
+					<form action="#" method="POST" class="space-y-6">
+						<!-- Full Name -->
+						<div>
+							<label
+								for="full-name"
+								class="block text-sm font-bold text-gray-700">
+								Full Name (নাম): <span class="text-red-500">*</span>
+							</label>
+							<input
+								type="text"
+								id="full-name"
+								name="full-name"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Father's/Mother's Name -->
+						<div>
+							<label
+								for="parent-name"
+								class="block text-sm font-bold text-gray-700">
+								Father's/Mother's Name (পিতা/মাতার নাম):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								type="text"
+								id="parent-name"
+								name="parent-name"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Date of Birth -->
+						<div>
+							<label for="dob" class="block text-sm font-bold text-gray-700">
+								Date of Birth (জন্ম তারিখ): <span class="text-red-500">*</span>
+							</label>
+							<input
+								type="date"
+								id="dob"
+								name="dob"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- National ID Number -->
+						<div>
+							<label for="nid" class="block text-sm font-bold text-gray-700">
+								National ID Number (জাতীয় পরিচয়পত্র নম্বর):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								type="text"
+								id="nid"
+								name="nid"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Gender -->
+						<div>
+							<label class="block text-sm font-bold text-gray-700">
+								Gender (লিঙ্গ): <span class="text-red-500">*</span>
+							</label>
+							<div class="mt-1 flex items-center space-x-4">
+								<label class="flex items-center">
+									<input
+										type="radio"
+										name="gender"
+										value="Male"
+										required
+										class="form-radio text-brp" />
+									<span class="ml-2">Male (পুরুষ)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="radio"
+										name="gender"
+										value="Female"
+										required
+										class="form-radio text-brp" />
+									<span class="ml-2">Female (মহিলা)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="radio"
+										name="gender"
+										value="Other"
+										required
+										class="form-radio text-brp" />
+									<span class="ml-2">Other (অন্যান্য)</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- Marital Status -->
+						<div>
+							<label class="block text-sm font-bold text-gray-700">
+								Marital Status (বৈবাহিক অবস্থা):
+								<span class="text-red-500">*</span>
+							</label>
+							<select
+								name="marital-status"
+								id="marital-status"
+								required
+								class="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp">
+								<option value="">Select</option>
+								<option value="Single">Single (অবিবাহিত)</option>
+								<option value="Married">Married (বিবাহিত)</option>
+								<option value="Divorced">Divorced (তালাকপ্রাপ্ত)</option>
+								<option value="Widowed">Widowed (বিধবা)</option>
+							</select>
+						</div>
+
+						<!-- Present Address -->
+						<div>
+							<label
+								for="present-address"
+								class="block text-sm font-bold text-gray-700">
+								Present Address (বর্তমান ঠিকানা):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								id="present-address"
+								name="present-address"
+								rows="3"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Permanent Address -->
+						<div>
+							<label
+								for="permanent-address"
+								class="block text-sm font-bold text-gray-700">
+								Permanent Address (স্থায়ী ঠিকানা):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								id="permanent-address"
+								name="permanent-address"
+								rows="3"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Mobile Number -->
+						<div>
+							<label
+								for="mobile-number"
+								class="block text-sm font-bold text-gray-700">
+								Mobile Number (মোবাইল নম্বর):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								type="tel"
+								id="mobile-number"
+								name="mobile-number"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp"
+								pattern="[0-9]{11}"
+								placeholder="e.g., 017xxxxxxxx" />
+						</div>
+
+						<!-- Email -->
+						<div>
+							<label for="email" class="block text-sm font-bold text-gray-700">
+								Email (ইমেইল): <span class="text-red-500">*</span>
+							</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Password -->
+						<div>
+							<label
+								for="password"
+								class="block text-sm font-bold text-gray-700">
+								Password (পাসওয়ার্ড): <span class="text-red-500">*</span>
+							</label>
+							<input
+								type="password"
+								id="password"
+								name="password"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Education Qualification -->
+						<div>
+							<label
+								for="education"
+								class="block text-sm font-bold text-gray-700">
+								Education Qualification (শিক্ষাগত যোগ্যতা):
+								<span class="text-red-500">*</span>
+							</label>
+							<select
+								name="education"
+								id="education"
+								required
+								class="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp">
+								<option value="">Select</option>
+								<option value="High School">High School (হাই স্কুল)</option>
+								<option value="Bachelor">Bachelor (স্নাতক)</option>
+								<option value="Master">Master (স্নাতকোত্তর)</option>
+								<option value="PhD">PhD (ডক্টরেট)</option>
+								<option value="Other">Other (অন্যান্য)</option>
+							</select>
+						</div>
+
+						<!-- Occupation -->
+						<div>
+							<label
+								for="occupation"
+								class="block text-sm font-bold text-gray-700">
+								Occupation (পেশা): <span class="text-red-500">*</span>
+							</label>
+							<input
+								type="text"
+								id="occupation"
+								name="occupation"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+
+						<!-- Blood Group -->
+						<div>
+							<label
+								for="blood-group"
+								class="block text-sm font-bold text-gray-700">
+								Blood Group (রক্তের গ্রুপ): <span class="text-red-500">*</span>
+							</label>
+							<select
+								name="blood-group"
+								id="blood-group"
+								required
+								class="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp">
+								<option value="">Select</option>
+								<option value="A+">A+ (এ+)</option>
+								<option value="A-">A- (এ-)</option>
+								<option value="B+">B+ (বি+)</option>
+								<option value="B-">B- (বি-)</option>
+								<option value="AB+">AB+ (এবি+)</option>
+								<option value="AB-">AB- (এবি-)</option>
+								<option value="O+">O+ (ও+)</option>
+								<option value="O-">O- (ও-)</option>
+							</select>
+						</div>
+
+						<!-- Religion -->
+						<div>
+							<label
+								for="religion"
+								class="block text-sm font-bold text-gray-700">
+								Religion (ধর্ম): <span class="text-red-500">*</span>
+							</label>
+							<select
+								name="religion"
+								id="religion"
+								required
+								class="mt-1 block w-full border border-gray-300 bg-white rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp">
+								<option value="">Select</option>
+								<option value="Islam">Islam (ইসলাম)</option>
+								<option value="Hinduism">Hinduism (হিন্দু ধর্ম)</option>
+								<option value="Christianity">
+									Christianity (খ্রিস্টান ধর্ম)
+								</option>
+								<option value="Buddhism">Buddhism (বৌদ্ধ ধর্ম)</option>
+								<option value="Other">Other (অন্যান্য)</option>
+							</select>
+						</div>
+
+						<!-- Social Media Links -->
+						<div>
+							<label
+								for="social-media"
+								class="block text-sm font-bold text-gray-700">
+								Social Media Links (সোশ্যাল মিডিয়া লিঙ্ক):
+								<span class="text-red-500">*</span>
+							</label>
+							<input
+								type="url"
+								id="social-media"
+								name="social-media"
+								required
+								class="block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+						</div>
+						<!-- political party involved  -->
+						<div>
+							<label class="block text-sm font-bold text-gray-700">
+								Are you involved with any other political party? (আপনি কি অন্য
+								কোনো রাজনৈতিক দলের সাথে জড়িত?):
+								<span class="text-red-500"></span>
+							</label>
+							<div class="mt-1 flex items-center space-x-4">
+								<label class="flex items-center">
+									<input
+										type="radio"
+										name="political-party-involved"
+										value="Yes"
+										required
+										class="form-radio text-brp" />
+									<span class="ml-2">Yes (হ্যা)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="radio"
+										name="political-party-involved"
+										value="No"
+										required
+										class="form-radio text-brp" />
+									<span class="ml-2">No (না)</span>
+								</label>
+							</div>
+							<div>
+								<label
+									for="if-yes"
+									class="block text-sm font-bold text-gray-700">
+									If yes, please specify (যদি হ্যা, অনুগ্রহ করে উল্লেখ করুন):
+									<span class="text-red-500"></span>
+								</label>
+								<input
+									type="text"
+									id="if-yes"
+									name="if-yes"
+									class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+							</div>
+						</div>
+						<!-- why you want to join the party -->
+						<div>
+							<label for="join" class="block text-sm font-bold text-gray-700">
+								Why do you want to join the Bangladesh Reformist Party (BRP)?
+								(আপনি কেন বাংলাদেশ সংস্কারবাদী পার্টি (বিআরপি) যোগ দিতে চান?):
+								<span class="text-red-500">*</span>
+							</label>
+							<textarea
+								id="join"
+								name="join"
+								rows="3"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp"></textarea>
+						</div>
+						<!-- how can you contribute to the party -->
+						<div>
+							<label
+								for="contribute"
+								class="block text-sm font-bold text-gray-700">
+								How can you contribute to the party? (আপনি কীভাবে দলের জন্য
+								অবদান রাখতে পারেন?):
+								<span class="text-red-500">*</span>
+							</label>
+							<textarea
+								id="contribute"
+								name="contribute"
+								rows="3"
+								required
+								class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp"></textarea>
+						</div>
+						<!-- Departments Checkboxes -->
+						<div>
+							<label class="block text-sm font-bold pb-2 text-gray-700">
+								Are you interested in any specific area of work within the
+								party? (আপনি কি দলের মধ্যে কোনো নির্দিষ্ট ক্ষেত্রে কাজ করতে
+								আগ্রহী?): <span class="text-red-500">*</span>
+							</label>
+							<div class="mt-1 space-y-2">
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Policy Department"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2">Policy Department (নীতি বিভাগ)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Community Outreach"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2">Community Outreach (সমাজ সেবা)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Election Campaigns"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2"
+										>Election Campaigns (নির্বাচনী প্রচারণা)</span
+									>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Youth Affairs"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2">Youth Affairs (যুব বিষয়)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Women Affairs"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2">Women Affairs (মহিলা বিষয়)</span>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Media & Communication"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2"
+										>Media & Communication (মিডিয়া ও যোগাযোগ)</span
+									>
+								</label>
+								<label class="flex items-center">
+									<input
+										type="checkbox"
+										name="departments"
+										value="Other"
+										id="other-department"
+										required
+										class="form-checkbox text-brp" />
+									<span class="ml-2">Other (অন্যান্য)</span>
+								</label>
+								<!-- If Other is checked, show this field -->
+								<div id="other-department-field" class="mt-2 hidden">
+									<label
+										for="other-department-specify"
+										class="block text-sm font-bold text-gray-700">
+										If other, please specify (যদি অন্যান্য হয়, তবে নির্দিষ্ট
+										করুন): <span class="text-red-500">*</span>
+									</label>
+									<input
+										type="text"
+										id="other-department-specify"
+										name="other-department-specify"
+										class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+								</div>
+							</div>
+							<div>
+								<label
+									for="other"
+									class="block text-sm font-bold text-gray-700">
+									If other, please specify (যদি অন্যান্য, অনুগ্রহ করে উল্লেখ
+									করুন):
+									<span class="text-red-500"></span>
+								</label>
+								<input
+									type="text"
+									id="other"
+									name="other"
+									class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+							</div>
+						</div>
+						<!-- File Uploads -->
+						<div>
+							<div class="mt-1 space-y-4">
+								<!-- National ID -->
+								<div>
+									<label
+										for="national-id"
+										class="block text-sm font-bold text-gray-700">
+										National ID (জাতীয় পরিচয়পত্র):
+										<span class="text-red-500">*</span>
+									</label>
+									<input
+										type="file"
+										id="national-id"
+										name="national-id"
+										accept=".pdf,.jpg,.jpeg,.png"
+										required
+										class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold" />
+									<p class="text-sm mt-1 text-gray-400">
+										Front and back photos (সামনের এবং পিছনের ছবি)
+									</p>
+								</div>
+
+								<!-- Photo -->
+								<div>
+									<label
+										for="photo"
+										class="block text-sm font-bold text-gray-700">
+										Photo (ছবি): <span class="text-red-500">*</span>
+									</label>
+									<input
+										type="file"
+										id="photo"
+										name="photo"
+										accept=".jpg,.jpeg,.png"
+										required
+										class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold" />
+									<p class="text-sm mt-1 text-gray-400">
+										Passport size photo (পাসপোর্ট সাইজ ছবি)
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- declaration  -->
+						<div class="flex items-center">
+							<input
+								type="checkbox"
+								id="declaration"
+								name="declaration"
+								required
+								class="mr-2" />
+							<label for="declaration" class="text-sm">
+								I hereby declare that all the information provided above is true
+								and accurate to the best of my knowledge. I agree to abide by
+								the rules and regulations of the Bangladesh Reformist Party
+								(BRP) and contribute to its mission and values. <br />
+								আমি এখানে ঘোষণা করছি যে উপরে প্রদান করা সমস্ত তথ্য আমার
+								সর্বোত্তম জ্ঞানের জন্য সঠিক এবং সত্য। আমি বাংলাদেশ সংস্কারবাদী
+								পার্টির (বিআরপি) নিয়ম ও বিধি মেনে চলতে এবং এর উদ্দেশ্য ও মূল্যের
+								প্রতি অবদান রাখতে সম্মত।
+							</label>
+						</div>
+
+						<!-- Submit Button -->
+						<div>
+							<button
+								type="submit"
+								class="bg-[#066AAB] text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300">
+								Submit 
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer Area -->
+		<footer>
+			<!-- Call to Action Section -->
+			<div>
+				<h1
+					class="text-[20px] md:text-[26px] font-bold py-5 text-center text-brp border-t-2">
+					বাংলাদেশ সংস্কারবাদী পার্টিতে যোগদিন
+				</h1>
+
+				<!-- Footer Content Grid -->
+				<div class="bg-[#D2F8E9] grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+					<!-- Logo and Navigation Links -->
+					<div class="md:col-span-2">
+						<div class="flex flex-col md:flex-row gap-7 items-center">
+							<img src="/Assets/f-logo.png" alt="Logo" class="w-24 h-auto" />
+							<ul
+								class="grid grid-cols-2 gap-4 md:grid-flow-col md:grid-rows-2 font-bold text-[14px] md:text-[15px]">
+								<li><a href="#">প্রচ্ছদ</a></li>
+								<li><a href="#">পরিচিতি</a></li>
+								<li><a href="#">গঠনতন্ত্র</a></li>
+								<li><a href="#">রাজনৈতিক</a></li>
+								<li><a href="#">নীতি</a></li>
+								<li><a href="#">বিজ্ঞপ্তি</a></li>
+								<li><a href="#">সংবাদ</a></li>
+								<li><a href="#">যোগাযোগ</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Social Media Section -->
+					<div class="flex flex-col items-center">
+						<h3 class="text-[18px] md:text-[20px] pb-2 text-center">
+							আমাদের ফলো করুন
+						</h3>
+						<div
+							class="flex space-x-6 text-2xl bg-[#F2F2F2] p-2 justify-center">
+							<a href="#" target="_blank" class="text-blue-600 hover:text-brp">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#" target="_blank" class="text-red-600 hover:text-brp">
+								<i class="fab fa-youtube"></i>
+							</a>
+							<a href="#" target="_blank" class="text-pink-600 hover:text-brp">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-black hover:text-brp">
+								<i class="fa-brands fa-square-x-twitter"></i>
+							</a>
+							<a href="#" target="_blank" class="text-blue-500 hover:text-brp">
+								<i class="fab fa-telegram"></i>
+							</a>
+							<a href="#" target="_blank" class="text-gray-800 hover:text-brp">
+								<i class="fab fa-tiktok"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div
+				class="container mx-auto text-center py-6 text-[18px] md:text-[22px]">
+				<p>@2024 বাংলাদেশ সংস্কারবাদী পার্টি</p>
+			</div>
+		</footer>
+
+		<!-- Script to Toggle the Mobile Menu -->
+		<script>
+			const menuToggle = document.getElementById("menu-toggle");
+			const mobileMenu = document.getElementById("mobile-menu");
+
+			menuToggle.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+		</script>
+	</body>
+</html>
