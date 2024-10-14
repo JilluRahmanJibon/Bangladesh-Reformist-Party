@@ -39,15 +39,15 @@
 	</head>
 	<body class="max-w-[1536px] mx-auto">
 		<!-- Navbar -->
-		<nav>
-			<section class="grid grid-cols-3 justify-between items-center border-b">
+			<nav>
+			<section class="md:grid md:grid-cols-3 flex justify-between items-center border-b">
 				<!-- Logo -->
 
 				<div class="col-span-2 lg:col-span-1 text-brp ml-5">
 					<a href="/">
-						<div class="flex items-center">
-							<img class="h-auto" src="Assets/logo.png" alt="Logo" />
-							<h1 class="sm:text-2xl text-xl text-inherit font-bold">
+						<div class="flex items-center gap-2">
+							<img class="h-auto sm:w-auto w-[60px]" src="Assets/logo.png" alt="Logo" />
+							<h1 class="sm:text-2xl 2xl:relative md:absolute 2xl:left-0 lg:left-18 md:left-32 text-lg font-bold">
 								Bangladesh Reformist Party
 							</h1>
 						</div>
@@ -55,7 +55,8 @@
 				</div>
 
 				<!-- Icons, Language, and Menu (For large screens) -->
-				<div class="hidden lg:flex flex-col justify-between w-full lg:col-span-2">
+				<div
+					class="hidden lg:flex flex-col justify-between w-full lg:col-span-2">
 					<!-- Social Icons and Language Selector -->
 					<div class="flex justify-end space-x-8 text-[18px]">
 						<!-- Social Icons -->
@@ -98,15 +99,17 @@
 							class="flex gap-4 items-center justify-end text-[15px] font-bold">
 							<li><a href="#">প্রচ্ছদ</a></li>
 							<li><a href="#">পরিচিতি</a></li>
-							<li><a href="#">গঠনতন্ত্র</a></li>
+							<li><a href="/post.html">গঠনতন্ত্র</a></li>
 							<li><a href="#">রাজনৈতিক</a></li>
 							<li><a href="#">নীতি</a></li>
 							<li><a href="#">বিজ্ঞপ্তি</a></li>
-							<li><a href="#">সংবাদ</a></li>
-							<li><a href="#">যোগাযোগ</a></li>
+							<li><a href="/news.html">সংবাদ</a></li>
+							<li><a href="/contact.html">যোগাযোগ</a></li>
 							<li><a href="#">লগইন</a></li>
 							<li>
-								<a href="#" class="px-4 py-1 rounded-full text-white bg-brp">
+								<a
+									href="/form.html"
+									class="px-4 py-1 rounded-full text-white bg-brp">
 									সদস্য নিবন্ধন
 								</a>
 							</li>
@@ -125,7 +128,7 @@
 			</section>
 
 			<!-- Mobile Menu (hidden by default) -->
-			<div id="mobile-menu" class="hidden lg:hidden bg-white p-4">
+			<div id="mobile-menu" class="hidden lg:hidden bg-white p-6">
 				<ul class="flex flex-col gap-4">
 					<li><a href="#">প্রচ্ছদ</a></li>
 					<li><a href="#">পরিচিতি</a></li>
