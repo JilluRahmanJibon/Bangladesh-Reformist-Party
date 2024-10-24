@@ -111,7 +111,7 @@
 							<li><a href="/news.html">সংবাদ</a></li>
 							<li><a href="/contact.html">যোগাযোগ</a></li>
 							<li><a href="#">লগইন</a></li>
-									<li class="flex flex-col gap-1 items-center">
+							<li class="flex flex-col gap-1 items-center">
 								<a
 									href="#"
 									class="px-6 py-1 text-[16px] rounded-full text-white bg-[#CFBA4C]">
@@ -147,16 +147,14 @@
 					<li><a href="#">সংবাদ</a></li>
 					<li><a href="#">যোগাযোগ</a></li>
 					<li><a href="#">লগইন</a></li>
-							<li class="flex flex-col gap-1 items-center">
-								<a
-									href="#"
-									class="px-6 py-1 text-[16px] rounded-full text-white bg-[#CFBA4C]">
-									পদবী
-								</a>
-								<a href="#" class="px-4 py-1 text-[16px] rounded-full">
-									লগআউট
-								</a>
-							</li>
+					<li class="flex flex-col gap-1 items-center">
+						<a
+							href="#"
+							class="px-6 py-1 text-[16px] rounded-full text-white bg-[#CFBA4C]">
+							পদবী
+						</a>
+						<a href="#" class="px-4 py-1 text-[16px] rounded-full"> লগআউট </a>
+					</li>
 				</ul>
 
 				<!-- Social Icons (on mobile) -->
@@ -278,7 +276,10 @@
 								alt="User Logo"
 								class="w-12 h-12 rounded-full mr-3" />
 
-							<div class="bg-[#F1F1F1] py-6 w-full rounded-full"></div>
+							<input
+								class="w-full p-2 rounded-md"
+								placeholder="What's your mind?"
+								type="text" />
 						</div>
 						<div class="flex justify-center items-center gap-2">
 							<svg
@@ -334,8 +335,16 @@
 										d="M317.935,185.533c0-20.517,16.633-37.15,37.15-37.15 c7.294,0,14.092,2.111,19.832,5.743c-6.584-10.405-18.184-17.318-31.407-17.318c-20.517,0-37.15,16.633-37.15,37.15 c0,13.223,6.914,24.823,17.318,31.407C320.046,199.626,317.935,192.828,317.935,185.533z"></path>
 								</g>
 							</svg>
-							<p>Photo/Video</p>
+							<div class="flex items-center justify-center">
+							<label
+								for="file-upload"
+								class="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+								Photo/Video
+							</label>
+							<input id="file-upload" type="file" class="sr-only" />
 						</div>
+						</div>
+						
 					</section>
 
 					<!-- Demo Post -->
@@ -502,7 +511,10 @@
 					class="w-64 bg-[#E6F9F2] shadow-md p-4 overflow-y-auto hidden lg:block">
 					<!-- Districts List -->
 					<div class="mb-8">
-						<h3 class="text-xl bg-[#82A388] px-2 py-4 text-center rounded-2xl font-bold mb-4">জেলা ভিত্তিক পোস্ট</h3>
+						<h3
+							class="text-xl bg-[#82A388] px-2 py-4 text-center rounded-2xl font-bold mb-4">
+							জেলা ভিত্তিক পোস্ট
+						</h3>
 						<ul class="space-y-2 flex flex-col">
 							<!-- List of Districts (Example) -->
 							<li>
