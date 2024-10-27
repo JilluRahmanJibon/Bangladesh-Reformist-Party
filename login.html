@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangladesh Reformist Party (BRP)</title>
+
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- FontAwesome CDN -->
+		<script
+			src="https://kit.fontawesome.com/ae3f90b708.js"
+			crossorigin="anonymous"></script>
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- Tailwind Custom Configuration -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							brp: "#0C611C",
+						},
+						fontFamily: {
+							sans: ['"Noto Sans Bengali"', "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+
+		<!-- Custom Styles (if any) -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="max-w-[1536px] mx-auto">
+		<!-- Navbar -->
+		<nav class="mt-5">
+			<div class="flex justify-center text-brp">
+				<a href="/">
+					<div class="flex items-center gap-2">
+						<img
+							class="h-auto sm:w-auto w-[55px]"
+							src="Assets/logo.png"
+							alt="Logo" />
+						<h1
+							class="sm:text-2xl 2xl:relative md:absolute 2xl:left-0 lg:left-18 md:left-32 text-[1rem] font-bold">
+							Bangladesh Reformist Party
+						</h1>
+					</div>
+				</a>
+			</div>
+		</nav>
+
+		<!-- Main Content Area -->
+		<main class="h-[80vh] flex justify-center items-center">
+			<div class="sm:w-1/2 mx-auto bg-white p-6 rounded-lg">
+				<form action="#" method="POST" class="space-y-6">
+					<!-- Email -->
+					<div>
+						<label for="email" class="block text-sm font-bold text-gray-700">
+							User Name (ইমেইল): <span class="text-red-500">*</span>
+						</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+					</div>
+
+					<!-- Password -->
+					<div>
+						<label for="password" class="block text-sm font-bold text-gray-700">
+							Password (পাসওয়ার্ড): <span class="text-red-500">*</span>
+						</label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							required
+							class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring-brp focus:border-brp" />
+					</div>
+
+					<!-- Submit Button -->
+					<div>
+						<button
+							type="submit"
+							class="bg-[#066AAB] text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300">
+							Submit
+						</button>
+					</div>
+					<div>
+						<p>
+							Forgot Password?
+							<a class="text-blue-600" href="">Reset Password</a>
+						</p>
+					</div>
+					<div>
+						<p>
+							Not a user? <a class="text-blue-600" href="">Register Here</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
