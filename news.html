@@ -405,7 +405,7 @@
 			</section>
 			<!-- pagination section  -->
 			<section class="flex justify-center pt-8">
-				<div class="flex items-center space-x-1">
+				<div id="pagination" class="flex items-center space-x-1">
 					<!-- Previous Button -->
 					<button
 						class="px-3 py-1 text-gray-700 bg-white border border-gray-300 rounded-l hover:bg-gray-200 disabled:opacity-50"
@@ -514,6 +514,68 @@
 
 			menuToggle.addEventListener("click", () => {
 				mobileMenu.classList.toggle("hidden");
+			});
+			document.addEventListener("DOMContentLoaded", function () {
+				const totalPages = 20; // Change total pages as required
+				const maxPagesToShow = 5; // Max visible page buttons at a time
+				let currentPage = 1;
+
+				function renderPagination() {
+					const paginationContainer = document.getElementById("pagination");
+					paginationContainer.innerHTML = "";
+
+					// Previous button
+					const prevButton = document.createElement("button");
+					prevButton.className =
+						"px-3 py-1 text-gray-700 bg-white border border-gray-300 rounded-l hover:bg-gray-200";
+					prevButton.innerText = "Previous";
+					prevButton.disabled = currentPage === 1;
+					prevButton.onclick = () => changePage(currentPage - 1);
+					paginationContainer.appendChild(prevButton);
+
+					// Page numbers
+					let startPage = Math.max(
+						currentPage - Math.floor(maxPagesToShow / 2),
+						1
+					);
+					let endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
+
+					// Adjust if reaching end
+					if (endPage - startPage < maxPagesToShow - 1) {
+						startPage = Math.max(endPage - maxPagesToShow + 1, 1);
+					}
+
+					for (let i = startPage; i <= endPage; i++) {
+						const pageButton = document.createElement("button");
+						pageButton.className = `px-3 py-1 border ${
+							i === currentPage
+								? "text-white bg-blue-500 border-blue-500"
+								: "text-gray-700 bg-white border-gray-300 hover:bg-gray-200"
+						}`;
+						pageButton.innerText = i;
+						pageButton.onclick = () => changePage(i);
+						paginationContainer.appendChild(pageButton);
+					}
+
+					// Next button
+					const nextButton = document.createElement("button");
+					nextButton.className =
+						"px-3 py-1 text-gray-700 bg-white border border-gray-300 rounded-r hover:bg-gray-200";
+					nextButton.innerText = "Next";
+					nextButton.disabled = currentPage === totalPages;
+					nextButton.onclick = () => changePage(currentPage + 1);
+					paginationContainer.appendChild(nextButton);
+				}
+
+				function changePage(newPage) {
+					if (newPage >= 1 && newPage <= totalPages) {
+						currentPage = newPage;
+						renderPagination();
+					}
+				}
+
+				// Initial render
+				renderPagination();
 			});
 		</script>
 	</body>
